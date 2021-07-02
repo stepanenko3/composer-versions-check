@@ -1,5 +1,5 @@
 {
-    "name": "sllh/composer-versions-check",
+    "name": "stepanenko3/composer-versions-check",
     "description": "Checks if packages are up to date to last major versions after update",
     "keywords": ["composer", "plugin", "update", "versions"],
     "type": "composer-plugin",
@@ -20,16 +20,16 @@
     },
     "autoload": {
         "psr-4": {
-            "SLLH\\ComposerVersionsCheck\\": "src/"
+            "Stepanenko3\\ComposerVersionsCheck\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SLLH\\ComposerVersionsCheck\\Tests\\": "tests/"
+            "Stepanenko3\\ComposerVersionsCheck\\Tests\\": "tests/"
         }
     },
     "extra": {
-        "class": "SLLH\\ComposerVersionsCheck\\VersionsCheckPlugin",
+        "class": "Stepanenko3\\ComposerVersionsCheck\\VersionsCheckPlugin",
         "branch-alias": {
             "dev-master": "2.x-dev"
         }

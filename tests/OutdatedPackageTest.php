@@ -1,9 +1,9 @@
 <?php
 
-namespace SLLH\ComposerVersionsCheck\Tests;
+namespace Stepanenko3\ComposerVersionsCheck\Tests;
 
 use Composer\Package\Package;
-use SLLH\ComposerVersionsCheck\OutdatedPackage;
+use Stepanenko3\ComposerVersionsCheck\OutdatedPackage;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>

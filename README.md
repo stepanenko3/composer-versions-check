@@ -4,15 +4,15 @@ composer-versions-check is a plugin for Composer.
 
 It warns user for outdated packages from last major versions after update command.
 
-[![Latest Stable Version](https://poser.pugx.org/sllh/composer-versions-check/v/stable)](https://packagist.org/packages/sllh/composer-versions-check)
-[![Latest Unstable Version](https://poser.pugx.org/sllh/composer-versions-check/v/unstable)](https://packagist.org/packages/sllh/composer-versions-check)
-[![License](https://poser.pugx.org/sllh/composer-versions-check/license)](https://packagist.org/packages/sllh/composer-versions-check)
-[![Dependency Status](https://www.versioneye.com/php/sllh:composer-versions-check/badge.svg)](https://www.versioneye.com/php/sllh:composer-versions-check)
-[![Reference Status](https://www.versioneye.com/php/sllh:composer-versions-check/reference_badge.svg)](https://www.versioneye.com/php/sllh:composer-versions-check/references)
+[![Latest Stable Version](https://poser.pugx.org/stepanenko3/composer-versions-check/v/stable)](https://packagist.org/packages/stepanenko3/composer-versions-check)
+[![Latest Unstable Version](https://poser.pugx.org/stepanenko3/composer-versions-check/v/unstable)](https://packagist.org/packages/stepanenko3/composer-versions-check)
+[![License](https://poser.pugx.org/stepanenko3/composer-versions-check/license)](https://packagist.org/packages/stepanenko3/composer-versions-check)
+[![Dependency Status](https://www.versioneye.com/php/stepanenko3:composer-versions-check/badge.svg)](https://www.versioneye.com/php/stepanenko3:composer-versions-check)
+[![Reference Status](https://www.versioneye.com/php/stepanenko3:composer-versions-check/reference_badge.svg)](https://www.versioneye.com/php/stepanenko3:composer-versions-check/references)
 
-[![Total Downloads](https://poser.pugx.org/sllh/composer-versions-check/downloads)](https://packagist.org/packages/sllh/composer-versions-check)
-[![Monthly Downloads](https://poser.pugx.org/sllh/composer-versions-check/d/monthly)](https://packagist.org/packages/sllh/composer-versions-check)
-[![Daily Downloads](https://poser.pugx.org/sllh/composer-versions-check/d/daily)](https://packagist.org/packages/sllh/composer-versions-check)
+[![Total Downloads](https://poser.pugx.org/stepanenko3/composer-versions-check/downloads)](https://packagist.org/packages/stepanenko3/composer-versions-check)
+[![Monthly Downloads](https://poser.pugx.org/stepanenko3/composer-versions-check/d/monthly)](https://packagist.org/packages/stepanenko3/composer-versions-check)
+[![Daily Downloads](https://poser.pugx.org/stepanenko3/composer-versions-check/d/daily)](https://packagist.org/packages/stepanenko3/composer-versions-check)
 
 [![Build Status](https://travis-ci.org/Soullivaneuh/composer-versions-check.svg?branch=master)](https://travis-ci.org/Soullivaneuh/composer-versions-check)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Soullivaneuh/composer-versions-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Soullivaneuh/composer-versions-check/?branch=master)
@@ -29,13 +29,13 @@ It warns user for outdated packages from last major versions after update comman
 You can install it either globally (recommended):
 
 ```bash
-composer global require sllh/composer-versions-check
+composer global require stepanenko3/composer-versions-check
 ```
 
 or locally (as require-dev dependency then):
 
 ```bash
-composer require --dev sllh/composer-versions-check
+composer require --dev stepanenko3/composer-versions-check
 ```
 
 ## Usage
@@ -51,7 +51,7 @@ You can configure the plugin via the [`COMPOSER_HOME/config.json`](https://getco
 ```json
 {
     "config": {
-        "sllh-composer-versions-check": {
+        "stepanenko3-composer-versions-check": {
             "show-links": false
         }
     }

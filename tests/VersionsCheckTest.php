@@ -1,13 +1,13 @@
 <?php
 
-namespace SLLH\ComposerVersionsCheck\Tests;
+namespace Stepanenko3\ComposerVersionsCheck\Tests;
 
 use Composer\Package\Link;
 use Composer\Package\Package;
 use Composer\Package\RootPackage;
 use Composer\Repository\ArrayRepository;
 use Composer\Repository\WritableArrayRepository;
-use SLLH\ComposerVersionsCheck\VersionsCheck;
+use Stepanenko3\ComposerVersionsCheck\VersionsCheck;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>

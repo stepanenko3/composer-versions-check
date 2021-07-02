@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\ComposerVersionsCheck;
+namespace Stepanenko3\ComposerVersionsCheck;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;
@@ -106,7 +106,7 @@ final class VersionsCheckPlugin implements PluginInterface, EventSubscriberInter
     private function resolveOptions()
     {
         $pluginConfig = $this->composer->getConfig()
-            ? $this->composer->getConfig()->get('sllh-composer-versions-check')
+            ? $this->composer->getConfig()->get('stepanenko3-composer-versions-check')
             : null
         ;
 

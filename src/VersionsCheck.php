@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\ComposerVersionsCheck;
+namespace Stepanenko3\ComposerVersionsCheck;
 
 use Composer\Package\AliasPackage;
 use Composer\Package\Link;

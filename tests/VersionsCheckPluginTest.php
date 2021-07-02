@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\ComposerVersionsCheck\Tests;
+namespace Stepanenko3\ComposerVersionsCheck\Tests;
 
 use Composer\Command\UpdateCommand;
 use Composer\Composer;
@@ -19,7 +19,7 @@ use Composer\Repository\RepositoryManager;
 use Composer\Repository\WritableArrayRepository;
 use Composer\Script\ScriptEvents;
 use Composer\Util\HttpDownloader;
-use SLLH\ComposerVersionsCheck\VersionsCheckPlugin;
+use Stepanenko3\ComposerVersionsCheck\VersionsCheckPlugin;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
 
@@ -106,7 +106,7 @@ class VersionsCheckPluginTest extends \PHPUnit_Framework_TestCase
             'Empty array plugin options' => array(
                 array(
                     'config' => array(
-                        'sllh-composer-versions-check' => array(),
+                        'stepanenko3-composer-versions-check' => array(),
                     ),
                 ),
                 array(
@@ -116,7 +116,7 @@ class VersionsCheckPluginTest extends \PHPUnit_Framework_TestCase
             'Empty plugin options' => array(
                 array(
                     'config' => array(
-                        'sllh-composer-versions-check' => null,
+                        'stepanenko3-composer-versions-check' => null,
                     ),
                 ),
                 array(
@@ -126,7 +126,7 @@ class VersionsCheckPluginTest extends \PHPUnit_Framework_TestCase
             'False plugin options' => array(
                 array(
                     'config' => array(
-                        'sllh-composer-versions-check' => false,
+                        'stepanenko3-composer-versions-check' => false,
                     ),
                 ),
                 array(
@@ -136,7 +136,7 @@ class VersionsCheckPluginTest extends \PHPUnit_Framework_TestCase
             'Activate show-links' => array(
                 array(
                     'config' => array(
-                        'sllh-composer-versions-check' => array(
+                        'stepanenko3-composer-versions-check' => array(
                             'show-links' => true,
                         ),
                     ),
@@ -148,7 +148,7 @@ class VersionsCheckPluginTest extends \PHPUnit_Framework_TestCase
             'Disable show-links' => array(
                 array(
                     'config' => array(
-                        'sllh-composer-versions-check' => array(
+                        'stepanenko3-composer-versions-check' => array(
                             'show-links' => false,
                         ),
                     ),
@@ -168,7 +168,7 @@ class VersionsCheckPluginTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(array($plugin), $this->composer->getPluginManager()->getPlugins());
         $this->assertAttributeInstanceOf('Composer\Composer', 'composer', $plugin);
         $this->assertAttributeInstanceOf('Composer\IO\IOInterface', 'io', $plugin);
-        $this->assertAttributeInstanceOf('SLLH\ComposerVersionsCheck\VersionsCheck', 'versionsCheck', $plugin);
+        $this->assertAttributeInstanceOf('Stepanenko3\ComposerVersionsCheck\VersionsCheck', 'versionsCheck', $plugin);
     }
 
     public function testUpdateCommand()

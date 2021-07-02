@@ -6,7 +6,7 @@ Composer 1.0 is now the minimum requirement to get the plugin working.
 
 ## Code removal
 
-`SLLH\ComposerVersionsCheck\VersionsCheck::versionCompare` method is removed.
+`Stepanenko3\ComposerVersionsCheck\VersionsCheck::versionCompare` method is removed.
 This method was here for BC and should never be used externally.
 
 ## Default options changes
