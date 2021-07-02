@@ -52,10 +52,14 @@ You can configure the plugin via the [`COMPOSER_HOME/config.json`](https://getco
 {
     "config": {
         "stepanenko3-composer-versions-check": {
-            "show-links": false
+            "root-packages-only": false,
+            "show-links": false,
+            "vendor": "laravel"
         }
     }
 }
 ```
 
+* `ignore-sub-dependencies`: Shows only outdated root packages.
 * `show-links`: Shows outdated package links. Set to `true` to get a larger output, like the demo.
+* `vendor`: Limits the output to a specific vendor/provider.

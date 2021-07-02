@@ -22,12 +22,19 @@ final class VersionsCheck
      */
     private $outdatedPackages = array();
 
-    public function checkPackages(ArrayRepository $distRepository, WritableRepositoryInterface $localRepository, RootPackageInterface $rootPackage)
+    public function checkPackages(ArrayRepository $distRepository, WritableRepositoryInterface $localRepository, RootPackageInterface $rootPackage, $rootPackagesOnly, $vendorName)
     {
         $packages = $localRepository->getPackages();
+        $rootRequires = array_keys($rootPackage->getRequires() + $rootPackage->getDevRequires());
+
         foreach ($packages as $package) {
             // Do not compare aliases. Aliased packages are also provided.
             if ($package instanceof AliasPackage) {
+                continue;
+            }
+
+            // No root package are ignored and it is one. Skip.
+            if ($rootPackagesOnly && !\in_array($package->getName(), $rootRequires, true)) {
                 continue;
             }
 
@@ -36,6 +43,13 @@ final class VersionsCheck
                 ? new Constraint('>', $package->getVersion())
                 : new VersionConstraint('>', $package->getVersion())
             ;
+
+            if ($vendorName !== false) {
+                $parts = explode('/', $package->getName());
+                if ($parts[0] !== $vendorName) {
+                    continue;
+                }
+            }
 
             $higherPackages = $distRepository->findPackages($package->getName(), $versionConstraint);
 

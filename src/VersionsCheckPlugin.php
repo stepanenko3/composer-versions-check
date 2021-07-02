@@ -95,7 +95,7 @@ final class VersionsCheckPlugin implements PluginInterface, EventSubscriberInter
             return;
         }
 
-        $this->checkVersions($this->composer->getRepositoryManager(), $this->composer->getPackage());
+        $this->checkVersions($this->composer->getRepositoryManager(), $this->composer->getPackage(), $this->options);
     }
 
     /**
@@ -111,14 +111,18 @@ final class VersionsCheckPlugin implements PluginInterface, EventSubscriberInter
         ;
 
         $options = array(
+            'root-packages-only' => false,
             'show-links' => false,
+            'vendor' => false,
         );
 
         if (null === $pluginConfig) {
             return $options;
         }
 
+        $options['root-packages-only'] = isset($pluginConfig['root-packages-only']) ? (bool) $pluginConfig['root-packages-only'] : $options['root-packages-only'];
         $options['show-links'] = isset($pluginConfig['show-links']) ? (bool) $pluginConfig['show-links'] : $options['show-links'];
+        $options['vendor'] = isset($pluginConfig['vendor']) ? $pluginConfig['vendor'] : false;
 
         return $options;
     }
@@ -129,7 +133,9 @@ final class VersionsCheckPlugin implements PluginInterface, EventSubscriberInter
             $this->versionsCheck->checkPackages(
                 $repository,
                 $repositoryManager->getLocalRepository(),
-                $rootPackage
+                $rootPackage,
+                $this->options['root-packages-only'],
+                $this->options['vendor'] ?? false,
             );
         }
 
