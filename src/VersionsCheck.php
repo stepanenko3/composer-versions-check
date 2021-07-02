@@ -54,11 +54,11 @@ final class VersionsCheck
             $higherPackages = $distRepository->findPackages($package->getName(), $versionConstraint);
 
             // Remove not stable packages if unwanted
-            if (true === $rootPackage->getPreferStable()) {
+            // if (true === $rootPackage->getPreferStable()) {
                 $higherPackages = array_filter($higherPackages, function (PackageInterface $package) {
                     return 'stable' === $package->getStability();
                 });
-            }
+            // }
 
             // We got higher packages! Let's push it.
             if (\count($higherPackages) > 0) {
