@@ -41,8 +41,7 @@ final class VersionsCheck
             // Old composer versions BC
             $versionConstraint = class_exists('Composer\Semver\Constraint\Constraint')
                 ? new Constraint('>', $package->getVersion())
-                : new VersionConstraint('>', $package->getVersion())
-            ;
+                : new VersionConstraint('>', $package->getVersion());
 
             if ($vendorName !== false) {
                 $parts = explode('/', $package->getName());
@@ -55,9 +54,9 @@ final class VersionsCheck
 
             // Remove not stable packages if unwanted
             // if (true === $rootPackage->getPreferStable()) {
-                $higherPackages = array_filter($higherPackages, function (PackageInterface $package) {
-                    return 'stable' === $package->getStability();
-                });
+            $higherPackages = array_filter($higherPackages, function (PackageInterface $package) {
+                return 'stable' === $package->getStability();
+            });
             // }
 
             // We got higher packages! Let's push it.
@@ -88,7 +87,7 @@ final class VersionsCheck
             $this->createNotUpToDateOutput($output, $showDepends);
         }
 
-        return implode(PHP_EOL, $output).PHP_EOL;
+        return implode(PHP_EOL, $output) . PHP_EOL;
     }
 
     /**

@@ -1,4 +1,4 @@
-# CHANGELOG
+# Release Notes
 
 * 2.0.4 (2020-05-05)
 

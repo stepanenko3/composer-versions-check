@@ -1,7 +1,12 @@
 {
     "name": "stepanenko3/composer-versions-check",
     "description": "Checks if packages are up to date to last major versions after update",
-    "keywords": ["composer", "plugin", "update", "versions"],
+    "keywords": [
+        "composer",
+        "plugin",
+        "update",
+        "versions"
+    ],
     "type": "composer-plugin",
     "license": "MIT",
     "authors": [
@@ -14,18 +19,9 @@
         "php": "^5.3 || ^7.0 || ^8.0",
         "composer-plugin-api": "^1.0 || ^2.0"
     },
-    "require-dev": {
-        "composer/composer": "^1.0 || ^2.0",
-        "symfony/phpunit-bridge": "^2.7.4|^3.0"
-    },
     "autoload": {
         "psr-4": {
             "Stepanenko3\\ComposerVersionsCheck\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Stepanenko3\\ComposerVersionsCheck\\Tests\\": "tests/"
         }
     },
     "extra": {

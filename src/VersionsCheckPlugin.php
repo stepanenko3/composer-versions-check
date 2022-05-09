@@ -107,8 +107,7 @@ final class VersionsCheckPlugin implements PluginInterface, EventSubscriberInter
     {
         $pluginConfig = $this->composer->getConfig()
             ? $this->composer->getConfig()->get('stepanenko3-composer-versions-check')
-            : null
-        ;
+            : null;
 
         $options = array(
             'root-packages-only' => false,
